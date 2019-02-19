@@ -1,0 +1,177 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  background-color: #EEEEEE;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background-color: #FFD000;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  body {
+    background-color: #dadada;
+  }
+}
+
+.bg-top-nav {
+  background-color: #981e32;
+  color: #FFF;
+}
+
+.nav-link {
+  color: #FFF;
+}
+
+.navbar-toggler {
+  background-color: #FFD000 !important;
+}
+
+.btn-outline-success {
+  color: #FFF;
+  border-color: #FFF;
+}
+
+.card_spec {
+  width: 300px;
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+@media screen and (max-width: 400px) {
+  .card_spec {
+    width: 150px;
+    margin: -20px 0 0 0 !important;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  .card_spec {
+    width: 200px;
+    margin: -20px 0 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    background: none;
+    border: none;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  .card {
+    background: none;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .btn {
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  .btn {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .col-sm {
+    width: 140px !important;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  .col-sm {
+    width: 200px !important;
+  }
+}
+
+.chart {
+  display: block;
+}
+
+@media screen and (max-width: 400px) {
+  .chart {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  .chart {
+    display: none !important;
+  }
+}
+
+.card-img-top {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  .card-img-top {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  .card-img-top {
+    display: block !important;
+  }
+}
+
+.chart_wrap {
+  overflow: hidden;
+  width: 298px;
+  height: 200px;
+}
+
+@media screen and (max-width: 400px) {
+  .chart_wrap {
+    width: 100px !important;
+    height: 20px !important;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  .chart_wrap {
+    width: 100px !important;
+    height: 20px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-title {
+    font-size: 12px !important;
+    margin: -20px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  .card-title {
+    font-size: 16px !important;
+    margin: -20px 0 0 0;
+  }
+}
+
+.card-text {
+  display: block;
+}
+
+@media screen and (max-width: 400px) {
+  .card-text {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 720px) {
+  .card-text {
+    display: none !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

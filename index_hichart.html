@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+<nav class="navbar navbar-expand-lg bg-top-nav">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container mt-3">
+  <h2>ECP App Store POC with HiChart</h2>
+  <p>To create a flexbox container, add the d-flex class. Use any of the d-*-flex classes to control WHEN the element should be a flex element on a specific screen width.</p>
+  <p>Resize the browser window to see the effect.</p>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card card_spec">
+          <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
+          <div class="chart_wrap"><div id="highcharts-219d8506-6090-4175-bab6-de514714bdb9" class="chart" style="margin:-80px 0 0 0;"></div></div><script>
+            (function(){ var files = ["https://code.highcharts.com/stock/highstock.js","https://code.highcharts.com/highcharts-more.js","https://code.highcharts.com/highcharts-3d.js","https://code.highcharts.com/modules/data.js","https://code.highcharts.com/modules/exporting.js","https://code.highcharts.com/modules/funnel.js","https://code.highcharts.com/modules/annotations.js","https://code.highcharts.com/modules/solid-gauge.js"],loaded = 0; if (typeof window["HighchartsEditor"] === "undefined") {window.HighchartsEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.HighchartsEditor.hasLoaded) {cl();} else {window.HighchartsEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "http://code.highcharts.com/highcharts.js" && src === "https://code.highcharts.com/stock/highstock.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.HighchartsEditor.ondone.length; i++) {try {window.HighchartsEditor.ondone[i]();} catch(e) {console.error(e);}}window.HighchartsEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Highcharts"] !== "undefined"){var options={"title":{"text":"My 2018 Credit Score"},"subtitle":{"text":"Month over Month"},"exporting":{},"chart":{"type":"column"},"xAxis":[{"categories":[],"crosshair":true}],"yAxis":[{"min":0,"title":{"text":"Score"}}],"tooltip":{"headerFormat":"<span style=\"font-size:10px\">{point.key}</span><table>","pointFormat":"<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td><td style=\"padding:0\"><b>{point.y:.1f} mm</b></td></tr>","footerFormat":"</table>","shared":true,"useHTML":true},"plotOptions":{"column":{"pointPadding":0.2,"borderWidth":0},"series":{"animation":false}},"series":[{"name":"Credit Score","turboThreshold":0}],"colors":["#b71c1c","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"],"data":{"csv":"\"Month\";\"Credit Score\"\n\"Jan\";764\n\"Feb\";754\n\"Mar\";766\n\"Apr\";731\n\"May\";706\n\"Jun\";744\n\"Jul\";743\n\"Aug\";766\n\"Sep\";722\n\"Oct\";722\n\"Nov\";769\n\"Dec\";779","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false}};/*
+            // Sample of extending options:
+            Highcharts.merge(true, options, {
+                chart: {
+                    backgroundColor: "#bada55"
+                },
+                plotOptions: {
+                    series: {
+                        cursor: "pointer",
+                        events: {
+                            click: function(event) {
+                                alert(this.name + " clicked\n" +
+                                      "Alt: " + event.altKey + "\n" +
+                                      "Control: " + event.ctrlKey + "\n" +
+                                      "Shift: " + event.shiftKey + "\n");
+                            }
+                        }
+                    }
+                }
+            });
+            */new Highcharts.Chart("highcharts-219d8506-6090-4175-bab6-de514714bdb9", options);}}})();
+            </script>          
+            <div class="card-body">
+            <h4 class="card-title">Short Service Name</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">Get App Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card card_spec">
+          <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
+          <div class="chart_wrap">
+            <div id="highcharts-f6c4ca08-f808-4357-bd9a-5fc033864e99" class="chart"></div><script>
+            (function(){ var files = ["https://code.highcharts.com/stock/highstock.js","https://code.highcharts.com/highcharts-more.js","https://code.highcharts.com/highcharts-3d.js","https://code.highcharts.com/modules/data.js","https://code.highcharts.com/modules/exporting.js","https://code.highcharts.com/modules/funnel.js","https://code.highcharts.com/modules/annotations.js","https://code.highcharts.com/modules/solid-gauge.js"],loaded = 0; if (typeof window["HighchartsEditor"] === "undefined") {window.HighchartsEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.HighchartsEditor.hasLoaded) {cl();} else {window.HighchartsEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "http://code.highcharts.com/highcharts.js" && src === "https://code.highcharts.com/stock/highstock.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.HighchartsEditor.ondone.length; i++) {try {window.HighchartsEditor.ondone[i]();} catch(e) {console.error(e);}}window.HighchartsEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Highcharts"] !== "undefined"){Highcharts.setOptions({lang:{}});var options={"title":{"text":"Current Score"},"subtitle":{"text":"Robin"},"exporting":{},"chart":{"type":"solidgauge","backgroundColor":"#FFFFFF","width":299,"height":175},"pane":{"center":["50%","85%"],"size":"140%","startAngle":"-90","endAngle":"90","background":{"backgroundColor":"#EEE","innerRadius":"60%","outerRadius":"100%","shape":"arc"}},"tooltip":{"enabled":false},"yAxis":[{"title":{"y":-70},"labels":{"y":16},"stops":[[0.1,"#55BF3B"],[0.5,"#DDDF0D"],[0.9,"#DF5353"]],"min":0,"max":100,"lineWidth":0,"minorTickInterval":null,"tickPixelInterval":400,"tickWidth":0}],"plotOptions":{"solidgauge":{"dataLabels":{"y":10,"borderWidth":0,"useHTML":true}},"series":{"animation":false,"dataLabels":{}}},"series[0]":{"dataLabels":{"format":"<div style=\"text-align:center\"><span style=\"font-size:25px;color:#000000\">{y}</span></div>"}},"series":[{"name":"New Column","turboThreshold":0,"_symbolIndex":0,"marker":{}},{"name":"null"},{"name":"null"},{"name":"null"},{"name":"null"},{"name":"null"},{"name":"null"},{"name":"null"}],"colors":["#FFF"],"xAxis":[{"title":{},"labels":{}}],"legend":{},"lang":{},"credits":{},"data":{"csv":"\"Column 2\";\"New Column\";\"null\";\"null\";\"null\";\"null\";\"null\";\"null\";\"null\"\n2;82;;;;;;;","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false}};/*
+            // Sample of extending options:
+            Highcharts.merge(true, options, {
+                chart: {
+                    backgroundColor: "#bada55"
+                },
+                plotOptions: {
+                    series: {
+                        cursor: "pointer",
+                        events: {
+                            click: function(event) {
+                                alert(this.name + " clicked\n" +
+                                      "Alt: " + event.altKey + "\n" +
+                                      "Control: " + event.ctrlKey + "\n" +
+                                      "Shift: " + event.shiftKey + "\n");
+                            }
+                        }
+                    }
+                }
+            });
+            */new Highcharts.Chart("highcharts-f6c4ca08-f808-4357-bd9a-5fc033864e99", options);}}})();
+            </script></div>    
+            <div class="card-body">
+            <h4 class="card-title">Short Service Name</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">Get App Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card card_spec">
+          <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
+          <div class="chart_wrap">
+            <div id="highcharts-b5ed1c10-eb32-44be-baae-27c9675343bd" class="chart" style="margin:-120px 0 0 0;"></div></div><script>
+            (function(){ var files = ["https://code.highcharts.com/stock/highstock.js","https://code.highcharts.com/highcharts-more.js","https://code.highcharts.com/highcharts-3d.js","https://code.highcharts.com/modules/data.js","https://code.highcharts.com/modules/exporting.js","https://code.highcharts.com/modules/funnel.js","https://code.highcharts.com/modules/annotations.js","https://code.highcharts.com/modules/solid-gauge.js"],loaded = 0; if (typeof window["HighchartsEditor"] === "undefined") {window.HighchartsEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.HighchartsEditor.hasLoaded) {cl();} else {window.HighchartsEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "http://code.highcharts.com/highcharts.js" && src === "https://code.highcharts.com/stock/highstock.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.HighchartsEditor.ondone.length; i++) {try {window.HighchartsEditor.ondone[i]();} catch(e) {console.error(e);}}window.HighchartsEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Highcharts"] !== "undefined"){var options={"title":{"text":"Desktop screen readers"},"subtitle":{"text":"Click on point to visit official website"},"exporting":{},"chart":{"type":"pie","description":"Most commonly used desktop screen readers in July 2015 as reported in the Webaim Survey. Shown as percentage of respondents. JAWS is by far the most used screen reader, with 30% of respondents using it. ZoomText and Window-Eyes follow, each with around 20% usage."},"plotOptions":{"series":{"dataLabels":{"enabled":true,"connectorColor":"#7cb5ec","format":"<b>{point.name}</b>: {point.percentage:.1f} %"},"point":{"events":{}},"cursor":"pointer","animation":false}},"series":[{"name":"Percentage usage","turboThreshold":0,"borderColor":"#7cb5ec"}],"data":{"csv":"\"Category\";\"Percentage usage\"\n\"Entertainment\";30.2\n\"Education\";22.2\n\"Travel\";20.7\n\"Grocery\";14.6\n\"Medical\";7.6\n\"Mortgage\";1.5\n\"Car Loan\";0.3\n\"Others\";2.9","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false},"yAxis":[{"title":{}}]};/*
+            // Sample of extending options:
+            Highcharts.merge(true, options, {
+                chart: {
+                    backgroundColor: "#bada55"
+                },
+                plotOptions: {
+                    series: {
+                        cursor: "pointer",
+                        events: {
+                            click: function(event) {
+                                alert(this.name + " clicked\n" +
+                                      "Alt: " + event.altKey + "\n" +
+                                      "Control: " + event.ctrlKey + "\n" +
+                                      "Shift: " + event.shiftKey + "\n");
+                            }
+                        }
+                    }
+                }
+            });
+            */new Highcharts.Chart("highcharts-b5ed1c10-eb32-44be-baae-27c9675343bd", options);}}})();
+            </script>         
+            <div class="card-body">
+            <h4 class="card-title">Short Service Name</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">Get App Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card card_spec">
+          <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
+          <div class="chart_wrap"><img src="https://via.placeholder.com/299x200" class="chart"></div>    
+            <div class="card-body">
+            <h4 class="card-title">Short Service Name</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">Get App Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card card_spec">
+          <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
+          <div class="chart_wrap"><img src="https://via.placeholder.com/299x200" class="chart"></div>    
+            <div class="card-body">
+            <h4 class="card-title">Short Service Name</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">Get App Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card card_spec">
+          <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
+          <div class="chart_wrap"><img src="https://via.placeholder.com/299x200" class="chart"></div>    
+            <div class="card-body">
+            <h4 class="card-title">Short Service Name</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">Get App Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card card_spec">
+          <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
+          <div class="chart_wrap"><img src="https://via.placeholder.com/299x200" class="chart"></div>    
+            <div class="card-body">
+            <h4 class="card-title">Short Service Name</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">Get App Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card card_spec">
+          <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
+          <div class="chart_wrap"><img src="https://via.placeholder.com/299x200" class="chart"></div>    
+            <div class="card-body">
+            <h4 class="card-title">Short Service Name</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">Get App Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card card_spec">
+          <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
+          <div class="chart_wrap"><img src="https://via.placeholder.com/299x200" class="chart"></div>    
+            <div class="card-body">
+            <h4 class="card-title">Short Service Name</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">Get App Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card card_spec">
+          <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
+          <div class="chart_wrap"><img src="https://via.placeholder.com/299x200" class="chart"></div>    
+            <div class="card-body">
+            <h4 class="card-title">Short Service Name</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">Get App Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

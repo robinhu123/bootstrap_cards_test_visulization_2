@@ -1,0 +1,154 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$main-bg-color: #EEEEEE;
+$main-bg-color_1: #FFD000;
+$main-bg-color_2: rgb(218, 218, 218);
+$main-bg-top-nav: #981e32;
+button-bg-color: 
+$main-bg-top-nav-text: #FFF;
+$base: 16px;
+$break-small_1:400px;
+$break-large_2:720px;
+$break-small:400px;
+$break-large:768px;
+$break-small:400px;
+$break-large:768px;
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $main-bg-color;
+  font-size:$base;
+    @media screen and (max-width: $break-small_1) {
+        background-color: $main-bg-color_1;
+    }
+
+    @media screen and (min-width: $break-small_1) and (max-width: $break-large_2) {
+        background-color: $main-bg-color_2;
+    }
+
+}
+.btn-primary {
+    background-color: #204D74 !important;
+}
+.bg-top-nav {
+    background-color: $main-bg-top-nav;
+    color: $main-bg-top-nav-text;
+  }
+
+  .nav-link {
+    color: $main-bg-top-nav-text;
+  }
+
+  .navbar-toggler {
+    background-color: $main-bg-color_1 !important;
+    
+  }
+
+  .btn-outline-success {
+    color: $main-bg-top-nav-text;
+    border-color: $main-bg-top-nav-text;
+  }
+
+.card_spec {
+    width:300px; text-align: center; margin:20px 0 0 0;
+    @media screen and (max-width: $break-small_1) {
+        width:150px;
+        margin:-20px 0 0 0 !important;
+    }
+
+    @media screen and (min-width: $break-small_1) and (max-width: $break-large_2) {
+        width:200px;
+        margin:-20px 0 0 0 !important;
+    }
+}
+.card {
+    @media screen and (max-width: $break-small_1) {
+        background:none;
+        border:none;
+    }
+
+    @media screen and (min-width: $break-small_1) and (max-width: $break-large_2) {
+        background:none;
+        border:none;
+    }
+}
+
+.btn {
+    @media screen and (max-width: $break-small_1) {
+        visibility: hidden;
+    }
+
+    @media screen and (min-width: $break-small_1) and (max-width: $break-large_2) {
+        visibility: hidden;
+    } 
+}
+
+.col-sm {
+    @media screen and (max-width: $break-small_1) {
+        width:140px !important;
+    }
+
+    @media screen and (min-width: $break-small_1) and (max-width: $break-large_2) {
+        width:200px !important;
+    } 
+}
+
+.chart {
+    display: block;
+    @media screen and (max-width: $break-small_1) {
+        display:none !important;
+    }
+
+    @media screen and (min-width: $break-small_1) and (max-width: $break-large_2) {
+        display:none !important;
+    } 
+}
+
+.card-img-top {
+    display: none;
+    @media screen and (max-width: $break-small_1) {
+        display:block !important;
+    }
+
+    @media screen and (min-width: $break-small_1) and (max-width: $break-large_2) {
+        display:block !important;
+    } 
+}
+
+.chart_wrap {
+    overflow:hidden; width:298px; height:200px;
+    @media screen and (max-width: $break-small_1) {
+        width:100px !important; 
+        height: 20px !important;
+    }
+
+    @media screen and (min-width: $break-small_1) and (max-width: $break-large_2) {
+        width:100px !important; 
+        height: 20px !important;
+    } 
+}
+
+.card-title {
+    @media screen and (max-width: $break-small_1) {
+        font-size:12px !important;
+        margin:-20px 0 0 0;
+    }
+
+    @media screen and (min-width: $break-small_1) and (max-width: $break-large_2) {
+        font-size:16px !important;
+        margin:-20px 0 0 0;
+    } 
+}
+
+.card-text {
+    display: block;
+    @media screen and (max-width: $break-small_1) {
+        display:none !important;
+    }
+
+    @media screen and (min-width: $break-small_1) and (max-width: $break-large_2) {
+        display:none !important;
+    } 
+}
+
+
