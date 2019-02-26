@@ -1,58 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
-<script>
-       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-       <script type="text/javascript">
-          google.charts.load("current", {packages:['corechart']});
-          google.charts.setOnLoadCallback(drawChart);
-          function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-              ["Element", "Density", { role: "style" } ],
-              ["JAN", 589, "#981e32"],
-              ["FEB", 623, "#981e32"],
-              ["MAR", 734, "#981e32"],
-              ["APR", 745, "#981e32"],
-              ["MAY", 622, "#981e32"],
-              ["JUN", 795, "#981e32"],
-              ["JUL", 825, "#981e32"],
-              ["AUG", 811, "#981e32"],
-              ["SEP", 723, "#981e32"],
-              ["OCT", 792, "#981e32"],
-              ["NOV", 801, "#981e32"],
-              ["DEC", 830, "#981e32"]
-            ]);
-
-            var view = new google.visualization.DataView(data);
-            view.setColumns([0, 1,
-                            2]);
-
-            var options = {
-              title: "2018 Monthly Avg. Credit Score",
-              width: 300,
-              height: 220,
-              bar: {groupWidth: "60%"},
-              legend: { position: "none" },
-            };
-            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-            chart.draw(view, options);
-        }
-        </script>
-        </script>
+    <head>
+        <title>PET - ECP Data Visulization POC</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <!-- Step 1 - Including the fusioncharts core library -->
+        <script type="text/javascript" src="http://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+        <!-- Step 2 - Including the fusion theme -->
+        <script type="text/javascript" src="http://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.theme.fusion.js"></script>
+    </head>
+<body>
 </head>
 <body> 
   <nav class="navbar navbar-expand-lg bg-top-nav">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Logo</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
@@ -87,7 +54,7 @@
     </div>
   </nav>
 <div class="container mt-3">
-  <h2>ECP App Store POC with Google Chart</h2>
+  <h2>ECP App Store POC with Fusion Chart</h2>
   <p>To create a flexbox container, add the d-flex class. Use any of the d-*-flex classes to control WHEN the element should be a flex element on a specific screen width.</p>
   <p>Resize the browser window to see the effect.</p>
   
@@ -96,7 +63,89 @@
       <div class="col-sm">
         <div class="card card_spec">
           <img class="card-img-top" src="icon.png" style="width:30%; height:30%; margin:0 auto; padding: 20px 0 0 0;" alt="Card image">
-          <div id="columnchart_values" style="width: 300px; height: 200px;"></div>
+          <div class="chart_wrap">
+
+            <!-- Fusion Chart Starts -->
+
+              <div id="chart-container">FusionCharts XT will load here!</div>
+  <script>
+        var chartInstance = new FusionCharts({
+        type: 'column2D',
+        width: '300', // Width of the chart
+        height: '200', // Height of the chart
+        dataFormat: 'json', // Data type
+        renderAt:'chart-container', //container where the chart will render
+        dataSource: {
+            "chart": {
+                "caption": "2018 Monthly Average Credit Score",
+                //"subCaption": "In MMbbl = User 1",
+                "xAxisName": "Month",
+                "yAxisName": "Score",
+                //"numberSuffix": "Points",
+                "theme": "fusion",
+            },
+            // Chart Data
+            "data": [{
+                "label": "JAN",
+                "value": "698",
+                "color": "#981E32" //Custom Color
+               
+            }, {
+                "label": "FEB",
+                "value": "729",
+                "color": "#981E32" //Custom Color
+                
+            }, {
+                "label": "MAR",
+                "value": "756",
+                "color": "#981E32" //Custom Color
+            }, {
+                "label": "APR",
+                "value": "810",
+                "color": "#981E32" //Custom Color
+            }, {
+                "label": "MAY",
+                "value": "767",
+                "color": "#981E32" //Custom Color
+            }, {
+                "label": "JUN",
+                "value": "809",
+                "color": "#981E32" //Custom Color
+            }, {
+                "label": "JUL",
+                "value": "789",
+                "color": "#981E32" //Custom Color
+            }, {
+                "label": "AUG",
+                "value": "752",
+                "color": "#981E32" //Custom Color
+            }, {
+                "label": "SEP",
+                "value": "801",
+                "color": "#981E32" //Custom Color
+            }, {
+                "label": "OCT",
+                "value": "673",
+                "color": "#981E32" //Custom Color
+            }, {
+                "label": "NOV",
+                "value": "790",
+                "color": "#981E32" //Custom Color
+            }, {
+                "label": "DEC",
+                "value": "811",
+                "color": "#981E32" //Custom Color
+            }]
+        }
+  });
+  // Render
+  chartInstance.render();
+    </script>
+
+
+            <!-- Fusion Chart Ends-->
+
+          </div>
           <div class="card-body">
             <h4 class="card-title">Short Service Name</h4>
             <p class="card-text">Some example text.</p>
